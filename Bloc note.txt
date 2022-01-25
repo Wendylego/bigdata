@@ -1,0 +1,20 @@
+
+
+
+ else if (input$method == "Random Forest") {
+      set.seed(123456)
+      #paste(err,round(a,4))
+      print(classifier_rf)
+    }
+    
+
+ else if (input$method == "Random Forest") {
+      set.seed(123456)
+      table(test$V2,rf.pred)
+    }
+
+
+else if (input$method == "Random Forest") {
+      set.seed(123456)
+      roc(test$V2,as.vector(rf.probs[,2]),plot=TRUE,legacy.axes=TRUE, lwd=2, col="red",auc.polygon=TRUE,print.auc=TRUE,grid=TRUE)
+    }
