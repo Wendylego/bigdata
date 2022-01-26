@@ -26,12 +26,12 @@ La valeur optimale du paramètre de régularisation λ peut être obtenue par va
 La régression Ridge correspond à la méthode des MCO sous une contrainte d'inégalité portant sur les coefficients : 
 
 ```{r pic1, echo=FALSE, fig.align="center", out.width = '25%'}
-knitr::include_graphics("images/Ridge.jpg")
+knitr::include_graphics("Images/Ridge.JPG")
 ```
 
 La fonction objective à minimiser équivaut à : 
 ```{r pic2, echo=FALSE, fig.align="center", out.width = '35%'}
-knitr::include_graphics("images/Ridge2.jpg")
+knitr::include_graphics("Images/Ridge2.JPG")
 ```
 
 Cette fonction à la particulatité de ne pas annuler les coefficients β mais de les réduire et de les faire tendre vers 0.
@@ -44,13 +44,13 @@ Cette pénalisation est adaptée lorsque p ≥ n. Elle peut être utile aussi da
 La régression Lasso correspond à la méthode des MCO sous une contrainte d'une norme 1 : 
 
 ```{r pic3, echo=FALSE, fig.align="center", out.width = '25%'}
-knitr::include_graphics("images/Lasso.jpg")
+knitr::include_graphics("Images/Lasso.JPG")
 ```
 
 La fonction objective à minimiser équivaut à : 
 
 ```{r pic4, echo=FALSE, fig.align="center", out.width = '35%'}
-knitr::include_graphics("images/Lasso2.jpg")
+knitr::include_graphics("Images/Lasso2.JPG")
 ```
 
 <p style='text-align: justify;'> 
@@ -65,7 +65,7 @@ La régression Elastic Net combine à la fois les pénalisations Ridge et Lasso 
 La fonction objective à minimiser équivaut à : 
 
 ```{r pic5, echo=FALSE, fig.align="center", out.width = '45%'}
-knitr::include_graphics("images/ElasticNet.jpg")
+knitr::include_graphics("Images/ElasticNet.JPG")
 ```
 
 avec λ1 et λ2 les deux paramètres de régularisation Lasso et Ridge respectivement.
@@ -81,10 +81,10 @@ Cette méthode à la capacité de mieux sélectionner les variables pertinentes 
 
 La fonction objective à minimiser équivaut à : 
 ```{r pic6, echo=FALSE, fig.align="center", out.width = '40%'}
-knitr::include_graphics("images/Adaptive.jpg")
+knitr::include_graphics("Images/Adaptive.JPG")
 ```
 ```{r pic7, echo=FALSE, fig.align="center",out.width = '35%'}
-knitr::include_graphics("images/Mess.jpg")
+knitr::include_graphics("Images/Mess.JPG")
 ```
 
 
@@ -96,7 +96,7 @@ knitr::include_graphics("images/Mess.jpg")
 Un random forest est constitué d'un ensemble d'arbres de décision indépendants.
 
 ```{r pressure, echo=FALSE, fig.align="center",out.width = '35%'}
-knitr::include_graphics("images/RAN1.png")
+knitr::include_graphics("Images/RAN1.png")
 ```
 
 
@@ -114,7 +114,7 @@ Les random forests réduisent la variance observée dans les arbres de décision
 La prédiction faite par le random forest pour des données inconnues est alors la moyenne (ou le vote, dans le cas d'un problème de classification) de tous les arbres.
 
 ```{r pressure2, echo=FALSE, fig.align="center", out.width = '50%'}
-knitr::include_graphics("images/RAN2.png")
+knitr::include_graphics("Images/RAN2.png")
 ```
 
 
@@ -128,7 +128,7 @@ Pour demander la prédiction d’Adaboost sur une observation, il faut interroge
 La prédiction du « strong learner » sera la moyenne de toutes les réponses des « weak learner ».
 
 ```{r pressure3, echo=FALSE, fig.align="center", out.width = '50%'}
-knitr::include_graphics("images/ADA.png")
+knitr::include_graphics("Images/ADA.png")
 ```
 
 

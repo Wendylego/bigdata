@@ -143,8 +143,6 @@ body <- dashboardBody(
             # First tab content
         tabItem(tabName = "Introduction",
                 htmlOutput("int"),
-                tags$button(id="lol2","Suivant",style = 'position: absolute; top:65%; left:50%;height:50px;width:200px;font-size:25px;',icon("forward"),
-                            class="btn action-button btn-large btn-primary",type="button", HTML('<i class="icon-star"></i>')), 
                 add_busy_spinner(spin = "fading-circle")),
       
         
@@ -153,12 +151,9 @@ body <- dashboardBody(
                 htmlOutput("Methodologie")),
         
         tabItem(tabName = "Ttt",fluidRow(
-          htmlOutput("texttt"),        
-          box(title = "Division Test et Train",
-                      solidHeader = TRUE,
-                      status = "primary",
-                      footer = "70% de la table initiale constitue l'échantillon apprentissage et 30% constitue l'échantillon test",
-                      img(src = "Test_train.png", height = 200, width = 220)))
+          htmlOutput("texttt"),tags$br(), tags$br(),h2("Division Test et Train"),       
+          fluidRow(align='center',tags$img(src = "Test_train.png", height = 200, width = 220)), 
+          h5("70% de la table initiale constitue l'échantillon apprentissage et 30% constitue l'échantillon test"))
                 
                 ),
                   
@@ -208,22 +203,23 @@ body <- dashboardBody(
                     box(title = "Courbe ROC",
                         solidHeader = TRUE,
                         status = "primary",
-                        plotOutput("result4")),
+                        plotOutput("resultat")),
                   box(title = "Générer un rapport pour la méthode choisie",
                       status = "primary",
                       solidHeader = TRUE,
                       downloadButton("Resultats", "Cliquez ici"))
                   ))
         , 
-                
         tabItem(tabName ="Comparaison",
-                        add_busy_spinner(spin = "fading-circle"),
-                        htmlOutput("comp"),
-                        h2("Tableau de comparaison"),
-                DT::dataTableOutput("mytable2"),
-                        h2("Graphiques des AUC"),
-                        plotOutput("result6")
-                ),
+                add_busy_spinner(spin = "fading-circle"),
+             htmlOutput("comp"),
+                tags$br(),
+                h2("Tableau de comparaison"), 
+                fluidRow(align='center',tags$img(src = "Tableau.JPG")), 
+                tags$br(), 
+                h2("Graphiques des AUC"),tags$br(), tags$br(),
+                fluidRow(tags$img(src = "Roc.JPG", width = 1500))),
+        
         tabItem(tabName = "propos",
                 fluidRow(
                   h1(strong(" Cette application a été développée par trois étudiantes du master ESA :"), align="center",style = "font-size:30px;"),
